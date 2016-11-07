@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- HEAD -->
+  <transmission name="Head_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jHead">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Head_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Front Body -->
+  <transmission name="BodyFront2_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyFront2_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyFront3_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyFront3_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyFront4_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyFront4_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyFront5_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyFront5_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyFront6_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyFront6_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Back Body -->
+  <transmission name="BodyBack7_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyBack7_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyBack8_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyBack8_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyBack9_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j9">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyBack9_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyBack10_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j10">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyBack10_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="BodyBack11_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j11">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="BodyBack11_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- LEG-leftFront -->
+  <transmission name="ForearmLeft1_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmLeft_Yaw">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmLeft1_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmLeft2_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmLeft_Pitch">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmLeft2_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmLeft3_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmLeft_Roll">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmLeft3_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmLeft4_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmLeft_Elbow">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmLeft4_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- LEG-rightFront -->
+  <transmission name="ForearmRight1_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmRight_Yaw">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmRight1_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmRight2_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmRight_Pitch">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmRight2_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmRight3_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmRight_Roll">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmRight3_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="ForearmRight4_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ForearmRight_Elbow">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ForearmRight4_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- LEG-leftBack -->
+  <transmission name="HindLimbLeft1_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbLeft_Yaw">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbLeft1_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbLeft2_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbLeft_Pitch">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbLeft2_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbLeft3_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbLeft_Roll">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbLeft3_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbLeft4_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbLeft_Elbow">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbLeft4_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- LEG-rightBack -->
+  <transmission name="HindLimbRight1_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbRight_Yaw">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbRight1_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbRight2_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbRight_Pitch">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbRight2_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbRight3_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbRight_Roll">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbRight3_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="HindLimbRight4_Transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="HindLimbRight_Elbow">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="HindLimbRight4_Motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>
