@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<robot name="sensor_kinect" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Camera -->
+    <joint name="camera_rgb_joint" type="fixed">
+      <origin xyz="-0.087 -0.0125 0.116" rpy="0 0 0"/>
+      <parent link="Head"/>
+      <child link="camera_rgb_frame" />
+    </joint>
+    <link name="camera_rgb_frame"/>
+
+    <joint name="camera_rgb_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="-1.5707963268 0 -1.5707963268" />
+      <parent link="camera_rgb_frame" />
+      <child link="camera_rgb_optical_frame" />
+    </joint>
+    <link name="camera_rgb_optical_frame"/> 
+
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707963268 0 1.5707963268"/>
+      <geometry>
+          <mesh filename="package://pleurobot_ros_pkg/meshes/sensors/asus_xtion_pro_live.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963268 0 1.5707963268"/>
+      <geometry>
+	      <mesh filename="package://pleurobot_ros_pkg/meshes/sensors/asus_xtion_pro_live.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+
+    <inertial>
+        <mass value="0.564" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />
+    </inertial>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 0 1" />
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <parent link="Head"/>
+    <child link="camera_link"/>
+  </joint> 
+
+    <!-- The fixed joints & links below are usually published by static_transformers launched by the OpenNi launch 
+         files. However, for Gazebo simulation we need them, so we add them here. (Hence, don't publish them additionally!) -->
+	<joint name="camera_depth_joint" type="fixed">
+	  <origin xyz="0 0.025 0" rpy="0 0 0" />
+	  <parent link="camera_rgb_frame" />
+	  <child link="camera_depth_frame" />
+	</joint>
+	<link name="camera_depth_frame"/>
+
+	<joint name="camera_depth_optical_joint" type="fixed">
+	  <origin xyz="0 0 0" rpy="-1.5707963268 0 -1.5707963268" />
+	  <parent link="camera_depth_frame" />
+	  <child link="camera_depth_optical_frame" />
+	</joint>
+	<link name="camera_depth_optical_frame"/>
+
+</robot>
