@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<robot>
+	<gazebo>
+	<!-- ros_control plugin -->
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+	  <robotNamespace>/pleurobot</robotNamespace>
+	  <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+	</plugin>
+
+	<!-- GPS plugin -->
+	<plugin name="pleurobot_gps_sim" filename="libhector_gazebo_ros_gps.so">
+	  <alwaysOn>true</alwaysOn>
+	  <updateRate>4.0</updateRate>
+	  <bodyName>base_link</bodyName>
+	  <topicName>gps</topicName>
+	  <velocityTopicName>gps_velocity</velocityTopicName>
+	  <drift>5.0 5.0 5.0</drift>
+	  <gaussianNoise>0.1 0.1 0.1</gaussianNoise>
+	  <velocityDrift>0 0 0</velocityDrift>
+	  <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise>
+	</plugin>
+
+	<!-- Groundtruth plugin -->
+	<plugin name="pleurobot_groundtruth_sim" filename="libgazebo_ros_p3d.so">
+	  <alwaysOn>true</alwaysOn>
+	  <updateRate>100.0</updateRate>
+	  <bodyName>base_link</bodyName>
+	  <topicName>groundtruth</topicName>
+	  <gaussianNoise>0.0</gaussianNoise>
+	  <frameName>map</frameName>
+	  <xyzOffsets>0 0 0</xyzOffsets>
+	  <rpyOffsets>0 0 0</rpyOffsets>
+	</plugin>
+
+	<!-- IMU plugin -->
+	<plugin name="pleurobot_imu_sim" filename="libhector_gazebo_ros_imu.so">
+		<alwaysOn>true</alwaysOn>
+		<updateRate>100.0</updateRate> 
+		<bodyName>base_link</bodyName>
+		<frameID>pleurobot_link1</frameID>
+		<topicName>pleurobot/IMU</topicName>
+		<xyzOffset>0.0 0.0 0.0</xyzOffset>
+		<rpyOffset>0.0 0.0 0.0</rpyOffset>
+		<gaussianNoise>0</gaussianNoise>
+		<accelDrift>0.5 0.5 0.5</accelDrift>
+		<accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
+		<rateDrift>0.0 0.0 0.0</rateDrift>
+		<rateGaussianNoise>0.00 0.00 0.00</rateGaussianNoise>
+		<headingDrift>0.0</headingDrift>
+		<headingGaussianNoise>0.00</headingGaussianNoise>
+	</plugin>
+	</gazebo>
+  
+  <!-- Head -->
+  <gazebo reference="Head">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- Base -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- Link1 -->
+  <gazebo reference="link1">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link2 -->
+  <gazebo reference="link2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link3 -->
+  <gazebo reference="link3">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link4 -->
+  <gazebo reference="link4">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link5 -->
+  <gazebo reference="link5">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link6 -->
+  <gazebo reference="link6">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link7 -->
+  <gazebo reference="link7">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link8 -->
+  <gazebo reference="link8">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link9 -->
+  <gazebo reference="link9">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link10 -->
+  <gazebo reference="link10">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link11 -->
+  <gazebo reference="link11">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link12 -->
+  <gazebo reference="link12">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link13 -->
+  <gazebo reference="link13">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link14 -->
+  <gazebo reference="link14">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link15 -->
+  <gazebo reference="link15">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link16 -->
+  <gazebo reference="link16">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link17 -->
+  <gazebo reference="link17">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link18 -->
+  <gazebo reference="link18">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link19 -->
+  <gazebo reference="link19">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link20 -->
+  <gazebo reference="link20">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link21 -->
+  <gazebo reference="link21">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link22 -->
+  <gazebo reference="link22">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link23 -->
+  <gazebo reference="link23">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link24 -->
+  <gazebo reference="link24">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link25 -->
+  <gazebo reference="link25">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link26 -->
+  <gazebo reference="link26">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Link27 -->
+  <gazebo reference="link27">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- TailBone -->
+  <gazebo reference="link_tailbone">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+
+  <!-- Tail -->
+  <gazebo reference="link_tail">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>    
+  </gazebo>
+  
+  <!-- camera_link -->
+  <gazebo reference="camera_link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+  
+  <!-- camera -->
+  <!-- Microsoft Kinect / ASUS Xtion PRO Live for simulation -->
+    <gazebo reference="camera_link">  
+      <sensor type="depth" name="camera">
+        <always_on>true</always_on>
+        <update_rate>20.0</update_rate>
+        <camera>
+          <horizontal_fov>1.0471975512</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>8.0</far>
+          </clip>
+        </camera>
+        <plugin name="kinect_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+          <cameraName>camera</cameraName>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>10</updateRate>
+          <imageTopicName>rgb/image_raw</imageTopicName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <frameName>camera_depth_optical_frame</frameName>
+          <baseline>0.1</baseline>
+          <distortion_k1>0.0</distortion_k1>
+          <distortion_k2>0.0</distortion_k2>
+          <distortion_k3>0.0</distortion_k3>
+          <distortion_t1>0.0</distortion_t1>
+          <distortion_t2>0.0</distortion_t2>
+          <pointCloudCutoff>0.4</pointCloudCutoff>
+        </plugin>
+      </sensor>
+    </gazebo>
+    
+</robot>
