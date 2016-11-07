@@ -1,0 +1,142 @@
+pleurobot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Position Controllers ---------------------------------------
+  j1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jHead
+    pid: {p: 100.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j2
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j3
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j4
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j5
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j6
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j7
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j8_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j8
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j9_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j9
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j10_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j10
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j11_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j11
+    pid: {p: 500.0, i: 10.0, d: 2.0, i_clamp: 0.0}
+
+  j12_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmLeft_Yaw
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j13_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmLeft_Pitch
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j14_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmLeft_Roll
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmLeft_Elbow
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j16_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmRight_Yaw
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j17_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmRight_Pitch
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j18_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmRight_Roll
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j19_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ForearmRight_Elbow
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j20_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbLeft_Yaw
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j21_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbLeft_Pitch
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j22_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbLeft_Roll
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j23_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbLeft_Elbow
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j24_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbRight_Yaw
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j25_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbRight_Pitch
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j26_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbRight_Roll
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
+  j27_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: HindLimbRight_Elbow
+    pid: {p: 500.0, i: 10.0, d: 1.0, i_clamp: 0.0}
+
