@@ -20,5 +20,11 @@
   <xacro:include filename="pleurobot_hindLimbRight.xacro"/>
 
   <xacro:include filename="pleurobot_tail.xacro"/>
+  
+  <!-- 3D Sensor -->
+  <!-- Kinect -->
+  <xacro:include filename="$(find pleurobot_ros_pkg)/urdf/sensors/kinect.urdf.xacro"/>
+  <!-- Asus xtion pro live -->
+  <!--xacro:include filename="$(find pleurobot_ros_pkg)/urdf/sensors/xtion.urdf.xacro"/-->
  
 </robot>
