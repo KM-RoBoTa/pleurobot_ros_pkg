@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot name="pleurobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="j_tail" type="revolute">
+    <parent link="link11"/>
+    <child  link="link_tail"/>
+    <origin xyz="-0.1 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <limit lower="-0.2" upper="0.2" effort="19.7336" velocity="1.2" />    
+  </joint>
+
+  <link name="link_tail">
+    <visual>
+      <origin xyz="0.97 -0.6125 -0.51" rpy="0 0 1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/tail.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.97 -0.6125 -0.51" rpy="0 0 1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/tail.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.19391" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+</robot>

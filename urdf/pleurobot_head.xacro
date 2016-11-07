@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot name="pleurobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="Head">
+    <visual>
+    <origin xyz="-0.6 0.615 0.515" rpy="3.1416 0 -1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/head.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+    <origin xyz="-0.6 0.615 0.515" rpy="3.1416 0 -1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/head.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.53597" />
+    <origin xyz="0 0 -0.315" rpy="0 0 0 "/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+  <joint name="jHead" type="revolute">
+    <parent link="link1"/>
+    <child  link="Head"/>
+      <origin xyz="0.1 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-0.6981" upper="0.6981" effort="19.7336" velocity="3.2" />     
+  </joint>
+
+</robot>

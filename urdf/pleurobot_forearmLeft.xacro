@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<robot name="pleurobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="link12">
+    <visual>
+      <origin xyz="-0.5025 -0.735 -0.428" rpy="0 0 1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link12.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.5025 -0.735 -0.428" rpy="0 0 1.5708 "/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link12.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.159" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+  <joint name="ForearmLeft_Yaw" type="revolute">
+    <parent link="link1"/>
+    <child  link="link12"/>
+      <origin xyz="0.0025 -0.12 0.095" rpy="0 0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="19.7336" velocity="2.2" />
+  </joint>
+
+  <link name="link13">
+    <visual>
+      <origin xyz="0.737 0.5025 0.425" rpy="3.1416 0 3.1416"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link13.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.737 0.5025 0.425" rpy="3.1416 0 3.1416"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link13.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.33101" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+  <joint name="ForearmLeft_Pitch" type="revolute">
+    <parent link="link12"/>
+    <child  link="link13"/>
+    <origin xyz="0 0 -0.004" rpy="0 0 1.5708 "/>
+    <axis   xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="19.7336" velocity="2.2" />
+  </joint>
+
+  <link name="link14">
+    <visual>
+      <origin xyz="-0.927 0.5025 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link14.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.927 0.5025 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link14.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2674" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+  <joint name="ForearmLeft_Roll" type="revolute">
+    <parent link="link13"/>
+    <child  link="link14"/>
+    <origin xyz="-0.19 0 0.003" rpy="1.5708 0 3.1416"/>
+	
+    <axis   xyz="1 0 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="19.7336" velocity="2.2" />
+  </joint>
+
+  <link name="link15">
+    <visual>
+      <origin xyz="-0.951 0.5025 -0.426" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link15.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </visual>
+    <collision>
+	  <origin xyz="-0.951 0.5025 -0.426" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://pleurobot_ros_pkg/meshes/link15.STL" scale=".0015 .0015 .0015"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.11213" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.025492" ixy="0" ixz="0" iyy="0.032502" iyz="-3.26672e-18" izz="0.01779"/>
+    </inertial>
+  </link>
+
+  <joint name="ForearmLeft_Elbow" type="revolute">
+    <parent link="link14"/>
+    <child  link="link15"/>
+    <origin xyz="0.025 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="19.7336" velocity="2.2" />
+  </joint>
+
+</robot>

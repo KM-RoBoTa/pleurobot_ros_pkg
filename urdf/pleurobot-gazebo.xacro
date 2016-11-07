@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="pleurobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find pleurobot_ros_pkg)/urdf/pleurobot.gazebo" />
+  <!-- Import transmission file -->
+  <xacro:include filename="$(find pleurobot_ros_pkg)/urdf/pleurobot.transmission.xacro" />
+  <!-- Import colors -->
+  <xacro:include filename="$(find pleurobot_ros_pkg)/urdf/materials.xacro" />
+  
+  <xacro:include filename="pleurobot_head.xacro"/>
+  <xacro:include filename="pleurobot_bodyFront.xacro"/>
+
+  <xacro:include filename="pleurobot_forearmLeft.xacro"/>
+  <xacro:include filename="pleurobot_forearmRight.xacro"/>
+
+  <xacro:include filename="pleurobot_bodyBack.xacro"/>
+
+  <xacro:include filename="pleurobot_hindLimbLeft.xacro"/>
+  <xacro:include filename="pleurobot_hindLimbRight.xacro"/>
+
+  <xacro:include filename="pleurobot_tail.xacro"/>
+ 
+</robot>
