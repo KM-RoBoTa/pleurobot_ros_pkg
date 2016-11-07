@@ -1,0 +1,5 @@
+<!-- Pleurobot mapping simulation with RTAB-Map -->
+<launch>
+	<!-- ******* Visualization of the Pleurobot on Rviz ******* -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find pleurobot_ros_pkg)/launch/navigation.rviz"/>
+</launch>

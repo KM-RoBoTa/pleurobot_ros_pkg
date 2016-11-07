@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find pleurobot)/config/pleurobot_controllers_numbered.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_manager" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/pleurobot" args="joint_state_controller j1_position_controller j2_position_controller j3_position_controller j4_position_controller j5_position_controller j6_position_controller j7_position_controller j8_position_controller j9_position_controller j10_position_controller j11_position_controller j12_position_controller j13_position_controller j14_position_controller j15_position_controller j16_position_controller j17_position_controller j18_position_controller j19_position_controller j20_position_controller j21_position_controller j22_position_controller j23_position_controller j24_position_controller j25_position_controller j26_position_controller j27_position_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/pleurobot/joint_states" />
+  </node>
+
+</launch>
